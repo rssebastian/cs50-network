@@ -1,0 +1,26 @@
+{
+  "name": "cs50-network",
+  "version": "1.0.0",
+  "description": "A site for CS50 graduates for job listings, insightful articles, and sharing solution code",
+  "main": "server.js",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "config": "^3.3.3",
+    "express": "^4.17.1",
+    "express-validator": "^6.8.0",
+    "gravatar": "^1.8.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.11.8",
+    "request": "^2.88.2"
+  },
+  "devDependencies": {
+    "concurrently": "^5.3.0",
+    "nodemon": "^2.0.6"
+  },
+  "scripts": {
+    "server": "node server",
+    "start": "nodemon server"
+  },
+  "author": "Ryan Sebastian",
+  "license": "MIT"
+}
