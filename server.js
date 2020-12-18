@@ -1,9 +1,17 @@
 const express = require('express');
+const connectDB = require('./config/db');
 
 const app = express();
 
-const PORT = process.env.PORT || 5000;
+// Connect to database
+connectDB();
 
-app.get('/', (req, res) => res.send('hello world!'));
+// Define routes
+app.use('/api/users', require('./routes/api/users'));
+app.use('/api/users', require('./routes/api/users'));
+app.use('/api/users', require('./routes/api/users'));
+app.use('/api/users', require('./routes/api/users'));
+
+const PORT = process.env.PORT || 5000;
 
 app.listen(PORT, console.log(`Server listening on Port ${PORT}`));
