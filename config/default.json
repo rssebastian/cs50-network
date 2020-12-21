@@ -1,3 +1,4 @@
 {
-    "mongoURI": "mongodb+srv://ryan:ryansebastian@cs50network.x8of0.mongodb.net/CS50Network?retryWrites=true&w=majority"
+  "mongoURI": "mongodb+srv://ryan:ryansebastian@cs50network.x8of0.mongodb.net/CS50Network?retryWrites=true&w=majority",
+  "jwtSecret": "mysecrettoken"
 }
