@@ -28,7 +28,7 @@ router.post(
       return res.status(400).json({ errors: errors.array() });
     }
 
-    const { name, email, password, cs50token } = req.body;
+    const { name, email, password, cs50Token } = req.body;
 
     try {
       // Check if user already exists
@@ -51,7 +51,7 @@ router.post(
         email,
         password,
         avatar,
-        cs50token,
+        cs50Token,
       });
 
       // Encrypt user's password
