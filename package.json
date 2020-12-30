@@ -4,6 +4,7 @@
   "description": "A site for CS50 graduates for job listings, insightful articles, and sharing solution code",
   "main": "server.js",
   "dependencies": {
+    "@fortawesome/free-brands-svg-icons": "^5.15.1",
     "bcryptjs": "^2.4.3",
     "config": "^3.3.3",
     "express": "^4.17.1",
