@@ -3,6 +3,7 @@
 // We will set the header's 'x-auth-token' field to the current token if there is one
 // If the user is logged in and they have a valid token, the res.data should be the user's information, and it will be part of the payload
 // When the user is registering, it'll turn the form data sent into JSON and POST to /api/users, and return the jwt
+// When the user logs in, it'll POST the email and password to /api/auth, and return the jwt
 
 import axios from 'axios';
 import { setAlert } from './alert';
@@ -11,6 +12,8 @@ import {
   REGISTER_FAIL,
   USER_LOADED,
   AUTH_ERROR,
+  LOGIN_SUCCESS,
+  LOGIN_FAIL,
 } from './types';
 
 import setAuthToken from '../utils/setAuthToken';
@@ -51,6 +54,8 @@ export const register = ({ name, email, password }) => async (dispatch) => {
       type: REGISTER_SUCCESS,
       payload: res.data,
     });
+
+    dispatch(loadUser());
   } catch (err) {
     const errors = err.response.data.errors;
 
@@ -59,6 +64,37 @@ export const register = ({ name, email, password }) => async (dispatch) => {
     }
     dispatch({
       type: REGISTER_FAIL,
+    });
+  }
+};
+
+// Login User
+export const login = (email, password) => async (dispatch) => {
+  const config = {
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  };
+
+  const body = JSON.stringify({ email, password });
+
+  try {
+    const res = await axios.post('/api/auth', body, config);
+
+    dispatch({
+      type: LOGIN_SUCCESS,
+      payload: res.data,
+    });
+
+    dispatch(loadUser());
+  } catch (err) {
+    const errors = err.response.data.errors;
+
+    if (errors) {
+      errors.forEach((error) => dispatch(setAlert(error.msg, 'danger')));
+    }
+    dispatch({
+      type: LOGIN_FAIL,
     });
   }
 };

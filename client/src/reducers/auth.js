@@ -1,12 +1,14 @@
 // This file is the authReducer that will determine how the state should be changed based on the action dispatched
 // If the user is already logged in with a valid token, they will be authenticated and their user data will be accessible in the state
-// If the user successfully registers, the token sent back as a response will be set in localStorage
+// If the user successfully registers or logs in, the token sent back as a response will be set in localStorage
 
 import {
   REGISTER_SUCCESS,
   REGISTER_FAIL,
   USER_LOADED,
   AUTH_ERROR,
+  LOGIN_SUCCESS,
+  LOGIN_FAIL,
 } from '../actions/types';
 
 const initialState = {
@@ -28,6 +30,7 @@ export default function authReducer(state = initialState, action) {
         user: payload,
       };
     case REGISTER_SUCCESS:
+    case LOGIN_SUCCESS:
       localStorage.setItem('token', payload.token);
       return {
         ...state,
@@ -37,6 +40,7 @@ export default function authReducer(state = initialState, action) {
       };
     case REGISTER_FAIL:
     case AUTH_ERROR:
+    case LOGIN_FAIL:
       localStorage.removeItem('token');
       return {
         ...state,
