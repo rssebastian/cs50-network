@@ -1,3 +1,5 @@
+// This file turns any Route passed through into a PrivateRoute by checking to see if the user is authenticated and if the app is loading a current user before rendering the route
+
 import React from 'react';
 import { Route, Redirect } from 'react-router-dom';
 import PropTypes from 'prop-types';
