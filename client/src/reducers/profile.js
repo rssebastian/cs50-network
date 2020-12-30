@@ -1,6 +1,7 @@
 // This file is the profileReducer that will determine how the state should be changed based on the action dispatched
 // If a profile was successfully found and passed to this reducer, it will be added to the state
-import { GET_PROFILE, PROFILE_ERROR } from '../actions/types';
+
+import { CLEAR_PROFILE, GET_PROFILE, PROFILE_ERROR } from '../actions/types';
 
 const initialState = {
   profile: null,
@@ -25,6 +26,13 @@ export default function profileReducer(state = initialState, action) {
       return {
         ...state,
         error: payload,
+        loading: false,
+      };
+    case CLEAR_PROFILE:
+      return {
+        ...state,
+        profile: null,
+        repos: [],
         loading: false,
       };
     default:
