@@ -1,3 +1,5 @@
+// This file is the Login component.
+
 import React, { Fragment, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';

@@ -1,3 +1,9 @@
+// This file is the Register component.
+// Upon user submission, it will double-check the intended password before dispatching the register action
+// Actions we want to use in this component are passed as props
+// useState hook takes in the initial state and returns an array of two values
+// [current state at every iteration of render, function that allows us to update state]
+
 import React, { Fragment, useState } from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';

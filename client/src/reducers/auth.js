@@ -1,3 +1,7 @@
+// This file is the authReducer that will determine how the state should be changed based on the action dispatched
+// If the user is already logged in with a valid token, they will be authenticated and their user data will be accessible in the state
+// If the user successfully registers, the token sent back as a response will be set in localStorage
+
 import {
   REGISTER_SUCCESS,
   REGISTER_FAIL,

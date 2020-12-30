@@ -1,3 +1,7 @@
+// This is the Alert component
+// This component will receive any alerts in the store as props
+// For each alert present in the state, it will render an alert div
+
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
