@@ -19,10 +19,10 @@ const Profiles = ({ getProfiles, profile: { profiles, loading } }) => {
         <Spinner />
       ) : (
         <Fragment>
-          <h1 className='large text-primary'>Developers</h1>
+          <h1 className='large text-primary'>Alumni</h1>
           <p className='lead'>
             <FontAwesomeIcon icon={faConnectdevelop} /> Browse and connect with
-            developers
+            fellow alumni!
           </p>
           <div className='profiles'>
             {profiles.length > 0 ? (
