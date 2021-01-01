@@ -5,6 +5,7 @@ import {
   faUserCircle,
   faUserTie,
   faGraduationCap,
+  faBriefcase,
 } from '@fortawesome/free-solid-svg-icons';
 
 const DashboardActions = () => {
@@ -30,6 +31,13 @@ const DashboardActions = () => {
           className='text-primary'
         ></FontAwesomeIcon>{' '}
         Add Education
+      </Link>
+      <Link to='/add-job' className='btn btn-light'>
+        <FontAwesomeIcon
+          icon={faBriefcase}
+          className='text-primary'
+        ></FontAwesomeIcon>{' '}
+        List New Job
       </Link>
     </div>
   );
