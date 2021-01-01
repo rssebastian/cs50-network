@@ -94,7 +94,7 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
           <input
             type='password'
             placeholder='CS50 Token'
-            name='token'
+            name='cs50Token'
             value={cs50Token}
             onChange={(e) => onChange(e)}
           />
