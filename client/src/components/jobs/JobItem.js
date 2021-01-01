@@ -10,6 +10,7 @@ const JobItem = ({
     name,
     avatar,
     title,
+    company,
     location,
     description,
     requirements,
@@ -26,6 +27,7 @@ const JobItem = ({
       </div>
       <div>
         <h3>{title}</h3>
+        <h4>{company}</h4>
         <h4>{location}</h4>
         <p className='my-1'>{description}</p>
         <p className='post-date'>{requirements}</p>
