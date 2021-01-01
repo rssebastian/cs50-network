@@ -21,9 +21,10 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
     email: '',
     password: '',
     password2: '',
+    cs50Token: '',
   });
 
-  const { name, email, password, password2 } = formData;
+  const { name, email, password, password2, cs50Token } = formData;
 
   const onChange = (e) =>
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -86,6 +87,15 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
             placeholder='Confirm Password'
             name='password2'
             value={password2}
+            onChange={(e) => onChange(e)}
+          />
+        </div>
+        <div className='form-group'>
+          <input
+            type='password'
+            placeholder='CS50 Token'
+            name='token'
+            value={cs50Token}
             onChange={(e) => onChange(e)}
           />
         </div>
