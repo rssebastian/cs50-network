@@ -1,5 +1,5 @@
 {
-  "mongoURI": "mongodb+srv://ryan:ryansebastian@cs50network.x8of0.mongodb.net/?retryWrites=true&w=majority",
+  "mongoURI": "mongodb+srv://ryan:Mapleman101!@cs50network.x8of0.mongodb.net/?retryWrites=true&w=majority",
   "jwtSecret": "mysecrettoken",
   "githubClientId": "73b261e95b2bc4f87ae8",
   "githubSecret": "34ff7439552a6af101659709aeb429b13b0e292b"
