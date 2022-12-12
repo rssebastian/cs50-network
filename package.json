@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "A site for CS50 graduates for job listings, insightful articles, and sharing solution code",
   "engines": {
-    "node": "14.x"
+    "node": "18.x"
   },
   "main": "server.js",
   "dependencies": {
