@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/static/css/main.dac88e8c.css",
+    "main.js": "/static/js/main.c139c9a3.js",
+    "static/js/377.b33aecdb.chunk.js": "/static/js/377.b33aecdb.chunk.js",
+    "static/media/harvard-statue.jpg": "/static/media/harvard-statue.1e3bfbe8741d908f6c33.jpg",
+    "static/media/spinner.gif": "/static/media/spinner.223e134429a82b93f798.gif",
+    "index.html": "/index.html",
+    "main.dac88e8c.css.map": "/static/css/main.dac88e8c.css.map",
+    "main.c139c9a3.js.map": "/static/js/main.c139c9a3.js.map",
+    "377.b33aecdb.chunk.js.map": "/static/js/377.b33aecdb.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.dac88e8c.css",
+    "static/js/main.c139c9a3.js"
+  ]
+}
